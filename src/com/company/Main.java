@@ -10,8 +10,6 @@ public class Main {
         dog.feed();
         dog.feed();
         dog.feed();
-        dog.feed();
-        dog.feed();
 
 
         Phone IPhone = new Phone();
