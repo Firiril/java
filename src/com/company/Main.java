@@ -8,6 +8,12 @@ public class Main {
         dog.name = "Haiku";
         dog.weight = 8.0;
         dog.feed();
+        dog.feed();
+        dog.feed();
+        dog.feed();
+        dog.feed();
+
+
         Phone IPhone = new Phone();
         IPhone.screenSize = 4.5;
         IPhone.producer = "Apple";
