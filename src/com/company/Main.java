@@ -10,6 +10,13 @@ public class Main {
         dog.feed();
         dog.feed();
 
+        Human me = new Human();
+        me.firstName = "Marcin";
+        me.lastName = "Gzik";
+        me.pet = dog;
+
+        System.out.println("Zwierzak nazywa się " + me.pet.name);
+
 
         Phone IPhone = new Phone();
         IPhone.screenSize = 4.5;
