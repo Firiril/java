@@ -9,7 +9,6 @@ public class Main {
         dog.weight = 8.0;
         dog.feed();
         dog.feed();
-        dog.feed();
 
 
         Phone IPhone = new Phone();
