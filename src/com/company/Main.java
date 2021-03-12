@@ -3,12 +3,7 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        Animal dog = new Animal();
-        dog.spieces = "dog";
-        dog.name = "Haiku";
-        dog.weight = 8.0;
-        dog.feed();
-        dog.feed();
+        Animal dog = new Animal("Husky", "Goni ogon");
 
         Human me = new Human();
         me.firstName = "Marcin";
@@ -18,12 +13,23 @@ public class Main {
         System.out.println("Zwierzak nazywa się " + me.pet.name);
 
 
-        Phone IPhone = new Phone();
-        IPhone.screenSize = 4.5;
-        IPhone.producer = "Apple";
-        IPhone.model = "6S";
-        IPhone.operationSystem = "ios";
+        me.pet.showWeight();
+        me.pet.feed();
+        me.pet.showWeight();
+        me.pet.walk();
+        me.pet.walk();
+        me.pet.walk();
+        me.pet.walk();
+        me.pet.walk();
+        me.pet.walk();
+        me.pet.walk();
+        me.pet.walk();
+        me.pet.showWeight();
+        me.pet.feed();
 
-        // write your code here
+        me.pet.feed();
+
+
+        me.pet.showWeight();
     }
 }
