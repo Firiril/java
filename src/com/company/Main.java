@@ -13,23 +13,9 @@ public class Main {
         System.out.println("Zwierzak nazywa się " + me.pet.name);
 
 
-        me.pet.showWeight();
-        me.pet.feed();
-        me.pet.showWeight();
-        me.pet.walk();
-        me.pet.walk();
-        me.pet.walk();
-        me.pet.walk();
-        me.pet.walk();
-        me.pet.walk();
-        me.pet.walk();
-        me.pet.walk();
-        me.pet.showWeight();
-        me.pet.feed();
-
-        me.pet.feed();
+        me.vehicle = new Car("Red", "e46", "BMW", 420.0);
 
 
-        me.pet.showWeight();
+
     }
 }
