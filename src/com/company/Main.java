@@ -14,7 +14,15 @@ public class Main {
 
 
         me.vehicle = new Car("Red", "e46", "BMW", 420.0);
+        me.setSalary(1500.0);
+        System.out.println(me.getSalary());
+        System.out.println(me.getSalary());
 
+
+        me.setSalary(1800.0);
+        System.out.println(me.getSalary());
+        me.setSalary(-1800.0);
+        System.out.println(me.getSalary());
 
 
     }
