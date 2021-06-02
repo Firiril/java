@@ -13,16 +13,15 @@ public class Main {
         System.out.println("Zwierzak nazywa się " + me.pet.name);
 
 
-        me.vehicle = new Car("Red", "e46", "BMW", 420.0);
         me.setSalary(1500.0);
-        System.out.println(me.getSalary());
+
         System.out.println(me.getSalary());
 
-
-        me.setSalary(1800.0);
-        System.out.println(me.getSalary());
-        me.setSalary(-1800.0);
-        System.out.println(me.getSalary());
+        me.setVehicle(new Car("niebieski", "e92", "BMW", 180.0, 30000.0));
+        me.setSalary(5000.0);
+        me.setVehicle(new Car("niebieski", "e92", "BMW", 180.0, 30000.0));
+        me.setSalary(50000.0);
+        me.setVehicle(new Car("niebieski", "e92", "BMW", 180.0, 30000.0));
 
 
     }

@@ -7,12 +7,34 @@ public class Human {
     String lastName;
     String phone;
     Animal pet;
-    Car vehicle;
+    private Car vehicle;
 
 
     private LocalTime SalaryCheckTime;
     private Double salary;
     private Double lastCheckedSalary;
+
+
+    public Car getVehicle() {
+        return this.vehicle;
+    }
+
+
+    public void setVehicle(Car car) {
+
+        if (car.getValue() < this.salary) {
+            this.vehicle = car;
+            System.out.println("Kupiłeś samochód za gotówkę");
+        } else if (car.getValue() < this.salary * 12) {
+            this.vehicle = car;
+            System.out.println("Kupiłeś samochód na kredyt :C");
+        } else {
+            System.out.println("Ten samochód jest dla Ciebie za drogi!");
+            System.out.println("Znajdź lepszą pracę!");
+        }
+
+    }
+
 
     public Double getSalary() {
         if (this.SalaryCheckTime != null) {
@@ -40,7 +62,5 @@ public class Human {
         } catch (IllegalArgumentException e) {
             System.out.println("Pensja nie może być ujemna");
         }
-
-
     }
 }
