@@ -1,8 +1,11 @@
 package com.company.device;
 
+import com.company.Human;
+import com.company.selleable;
+
 import java.util.Objects;
 
-public class Car extends Device {
+public class Car extends Device implements selleable {
 
 
     public String color;
@@ -59,5 +62,27 @@ public class Car extends Device {
                 ", power=" + power +
                 ", value=" + value +
                 '}';
+    }
+
+    @Override
+    public void sell(Human a, Human b, Double price) {
+        if (a.getVehicle() != null) {
+            if (b.getVehicle() == null) {
+                if (b.cash > price) {
+                    System.out.println("samochód sprzedany!");
+                    b.setVehicle2(a.getVehicle());
+                    a.setVehicle2(null);
+                    a.cash += price;
+                    b.cash -= price;
+                } else {
+                    System.out.println("Kupujący nie ma wystarczajaco pieniedzy");
+                }
+            } else {
+                System.out.println("Kupujący ma już samochód");
+
+            }
+        } else {
+            System.out.println("Sprzedający nie posiada samochodu");
+        }
     }
 }

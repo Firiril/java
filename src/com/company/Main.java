@@ -13,35 +13,74 @@ public class Main {
         me.firstName = "Marcin";
         me.lastName = "Gzik";
         me.pet = dog;
+        Human Gustav = new Human();
+        Gustav.addCash(1500.0);
 
-        System.out.println("Zwierzak nazywa się " + me.pet.name);
 
-
-        me.setSalary(1500.0);
-
-        System.out.println(me.getSalary());
+        me.addCash(130.0);
 
 
         Car car1 = new Car("e46", "BMW", 2004, "niebieski", 180.0, 30000.0);
         Car car2 = new Car("e46", "BMW", 2004, "niebieski", 180.0, 30000.0);
-        System.out.println(car1);
-        System.out.println(car2);
-        System.out.println("Porównuje dwa obiekty Car o tych samych polach: ");
-        System.out.println(car1.equals(car2));
-
-        System.out.println("Hashcode car1: " + car1.hashCode());
-        System.out.println("Hashcode car2: " + car2.hashCode());
+        me.setVehicle2(car1);
 
         Phone iphone = new Phone("13 s max pro ultra", "Apple", 2021, 6.4, "iOS");
-        System.out.println("To string car1: " + car1.toString());
-        System.out.println("To string dog: " + me.pet.toString());
-        System.out.println("To string me: " + me.toString());
-        System.out.println("To string phone: " + iphone.toString());
 
-        iphone.turnOn();
-        car1.turnOn();
-        iphone.turnOn();
-        car1.turnOn();
+        if (me.pet != null) {
+            System.out.println("Twoje zwierze: ");
+            System.out.println(me.pet.toString());
+        } else {
+            System.out.println("Nie posiadasz zwierzecia");
+        }
+        if (Gustav.pet != null) {
+            System.out.println("Zwierze Gustava: ");
+            System.out.println(Gustav.pet.toString());
+        } else {
+            System.out.println("Gustav nie posiada zwierzecia");
+        }
+
+        System.out.println("mój cash: " + me.cash);
+        System.out.println("Cash Gustava: " + Gustav.cash);
+        me.pet.sell(me, Gustav, 500.5);
+        System.out.println("po sprzedaży");
+        System.out.println("mój cash: " + me.cash);
+        System.out.println("Cash Gustava: " + Gustav.cash);
+        if (me.pet != null) {
+            System.out.println("Twoje zwierze: ");
+            System.out.println(me.pet.toString());
+        } else {
+            System.out.println("Nie posiadasz zwierzecia");
+        }
+        if (Gustav.pet != null) {
+            System.out.println("Zwierze Gustava: ");
+            System.out.println(Gustav.pet.toString());
+        } else {
+            System.out.println("Gustav nie posiada zwierzecia");
+        }
+
+
+        System.out.println("mój cash: " + me.cash);
+        System.out.println("Cash Gustava: " + Gustav.cash);
+        car1.sell(me, Gustav, 25000.0);
+        System.out.println("mój cash: " + me.cash);
+        System.out.println("Cash Gustava: " + Gustav.cash);
+        Gustav.addCash(26000.0);
+        car1.sell(me, Gustav, 25000.0);
+        System.out.println("mój cash: " + me.cash);
+        System.out.println("Cash Gustava: " + Gustav.cash);
+        System.out.println("Handel ludźmi jest nie możliwy, bo nie jest zaimplementowany!");
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

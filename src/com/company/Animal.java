@@ -2,7 +2,7 @@ package com.company;
 
 import java.io.File;
 
-public class Animal {
+public class Animal implements selleable {
     final String Species;
     private Double weight;
     String name;
@@ -59,5 +59,26 @@ public class Animal {
                 ", name='" + name + '\'' +
                 ", pic=" + pic +
                 '}';
+    }
+
+    @Override
+    public void sell(Human a, Human b, Double price) {
+        if (a.pet != null) {
+            if (b.pet == null) {
+                if (b.cash > price) {
+                    b.pet = a.pet;
+                    a.pet = null;
+                    a.cash += price;
+                    b.cash -= price;
+                } else {
+                    System.out.println("Kupujący ma za mało pieniędzy");
+                }
+            } else {
+                System.out.println("Kupujący ma już zwierze.");
+
+            }
+        } else {
+            System.out.println("Sprzedający nie ma zwierzęcia do sprzedania");
+        }
     }
 }

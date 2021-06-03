@@ -9,6 +9,7 @@ public class Human {
     String lastName;
     String phone;
     Animal pet;
+    public Double cash;
     private Car vehicle;
 
 
@@ -34,6 +35,19 @@ public class Human {
             System.out.println("Ten samochód jest dla Ciebie za drogi!");
             System.out.println("Znajdź lepszą pracę!");
         }
+
+    }
+
+    public void setVehicle2(Car car) {
+
+        this.vehicle = car;
+
+    }
+
+    public void addCash(Double value) {
+        if (this.cash == null)
+            this.cash = 0.0;
+        this.cash += value;
 
     }
 
