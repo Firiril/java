@@ -1,10 +1,13 @@
-package com.company;
+package com.company.creatures;
+
+import com.company.Human;
+import com.company.selleable;
 
 import java.io.File;
 
-public class Animal implements selleable {
+public abstract class Animal implements selleable, Feedable {
     final String Species;
-    private Double weight;
+    protected Double weight;
     String name;
     File pic;
 

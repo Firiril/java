@@ -1,5 +1,6 @@
 package com.company;
 
+import com.company.creatures.Pet;
 import com.company.device.Car;
 
 import java.time.LocalTime;
@@ -8,7 +9,7 @@ public class Human {
     String firstName;
     String lastName;
     String phone;
-    Animal pet;
+    public Pet pet;
     public Double cash;
     private Car vehicle;
 
