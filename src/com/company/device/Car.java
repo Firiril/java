@@ -2,25 +2,34 @@ package com.company.device;
 
 import java.util.Objects;
 
-public class Car {
+public class Car extends Device {
 
-    final public String model;
-    final public String brand;
+
     public String color;
     public double power;
     private double value;
 
-    public Car(String model, String brand) {
-        this.model = model;
-        this.brand = brand;
+
+    public Car(String model, String brand, int yearOfProduction) {
+        super(model, brand, yearOfProduction);
     }
 
-    public Car(String color, String model, String brand, double power, double value) {
+    public Car(String model, String brand, int yearOfProduction, String color, double power, double value) {
+        super(model, brand, yearOfProduction);
         this.color = color;
-        this.model = model;
-        this.brand = brand;
         this.power = power;
         this.value = value;
+    }
+
+    @Override
+    public void turnOn() {
+        if (this.isOn) {
+            System.out.println("Samochód już pracuje");
+
+        } else {
+            System.out.println("Silnik się uruchomił samochód pracuje");
+            this.isOn = true;
+        }
     }
 
     @Override

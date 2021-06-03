@@ -1,14 +1,12 @@
 package com.company.device;
 
-public class Phone {
-    String producer;
-    String model;
+public class Phone extends Device {
+
     Double screenSize;
     String operationSystem;
 
-    public Phone(String producer, String model, Double screenSize, String operationSystem) {
-        this.producer = producer;
-        this.model = model;
+    public Phone(String model, String brand, int yearOfProduction, Double screenSize, String operationSystem) {
+        super(model, brand, yearOfProduction);
         this.screenSize = screenSize;
         this.operationSystem = operationSystem;
     }
@@ -16,10 +14,23 @@ public class Phone {
     @Override
     public String toString() {
         return "Phone{" +
-                "producer='" + producer + '\'' +
+                "brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
                 ", screenSize=" + screenSize +
                 ", operationSystem='" + operationSystem + '\'' +
                 '}';
+    }
+
+
+    @Override
+    public void turnOn() {
+
+        if (this.isOn) {
+            System.out.println("Telefon jest już włączony");
+
+        } else {
+            System.out.println("Telefon uruchomił się. System pracuje...");
+            this.isOn = true;
+        }
     }
 }
