@@ -3,21 +3,21 @@ package com.company;
 import java.io.File;
 
 public class Animal {
-    final String Spieces;
+    final String Species;
     private Double weight;
     String name;
     File pic;
 
-    public Animal(String spieces, Double weight, String name) {
-        Spieces = spieces;
+    public Animal(String species, Double weight, String name) {
+        Species = species;
         this.weight = weight;
         this.name = name;
     }
 
-    public Animal(String spieces, String name) {
-        Spieces = spieces;
+    public Animal(String species, String name) {
+        Species = species;
         this.name = name;
-        this.weight = kalkulatorWagi(spieces);
+        this.weight = weightCalculator(species);
 
     }
 
@@ -38,16 +38,12 @@ public class Animal {
         }
     }
 
-    private double kalkulatorWagi(String spieces) {
-        switch (spieces) {
-            case "Husky":
-                return 5.0;
-            case "Cat":
-                return 6.0;
-            default:
-                return 7.0;
-
-        }
+    private double weightCalculator(String spieces) {
+        return switch (spieces) {
+            case "Husky" -> 5.0;
+            case "Cat" -> 6.0;
+            default -> 7.0;
+        };
     }
 
 
@@ -55,5 +51,13 @@ public class Animal {
         System.out.println(this.weight);
     }
 
-
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "Spieces='" + Species + '\'' +
+                ", weight=" + weight +
+                ", name='" + name + '\'' +
+                ", pic=" + pic +
+                '}';
+    }
 }

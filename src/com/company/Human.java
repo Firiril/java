@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.device.Car;
+
 import java.time.LocalTime;
 
 public class Human {
@@ -62,5 +64,16 @@ public class Human {
         } catch (IllegalArgumentException e) {
             System.out.println("Pensja nie może być ujemna");
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Human{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", phone='" + phone + '\'' +
+                ", pet=" + pet +
+                ", vehicle=" + vehicle +
+                '}';
     }
 }
